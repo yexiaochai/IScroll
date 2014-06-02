@@ -1,0 +1,995 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="robots" content="all" />
+
+
+  <style type="text/css">
+        
+/*reset*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}
+body,button,input,select,textarea{font:normal 14px/1.5 Tahoma,"Lucida Grande",Verdana,"Microsoft YaHei",hei;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,iframe{display:block;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500;}
+address,cite,dfn,em,var,i{font-style:normal;font-weight:normal;font-family:arial;}
+ul,ol{list-style:none}
+a{color:#000;text-decoration:none}
+a:hover{text-decoration:underline;-webkit-transition:color .2s linear;-moz-transition:color .2s linear;-ms-transition:color .2s linear;-o-transition:color .2s linear;transition:color .2s linear;}
+fieldset,img,button,input{border:0}
+button,input,select,textarea{font-size:100%}
+table{border-collapse:collapse;border-spacing:0}
+input[type="button"],input[type="submit"]{-webkit-appearance:none;}
+body{min-width:320px; background:#f5f5f5;overflow-x:hidden;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-font-smoothing:subpixel-antialiased;-moz-user-select:none;color:#000;}:focus{outline:none;}.clearfix:after{clear:both;content:'.';display:block;height:0;visibility:hidden;line-height:0;}.clearfix{*zoom:1;}.fl{float:left;}.fr{float:right;}.clear{clear:both;}.overflow{overflow:hidden;}.ellips{white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}.ellips_line2,.ellips_line3{display: -webkit-box;-webkit-box-orient: vertical;overflow: hidden;}.ellips_line2{-webkit-line-clamp:2;}.ellips_line3{-webkit-line-clamp:3;}.pos_rel{position:relative;}
+html,body,.h100{ height:100%; }
+dfn{color:#ff9913; font-size:12px; font-weight:normal;}
+/*-----------------------------------------common--------------------*/
+.i,.i_bef:before,.i_aft:after,.carlist li:before,.ok_crt:after{background:url(../img/style1/v2_bgs.png) no-repeat; background-size:175px 125px;}
+.i_bef:before,.i_aft:after,.carlist li:before{position: absolute;content: "";}
+.abs_size{-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.opacity{opacity:0.7; filter:alpha(opacity=70);}
+
+/*active*/
+.list_st_border li:active,.p_hinttxt:active,.search_cancel:active,.citylist dd:active{ background:#f8f8f8;}
+.btn_yellow:active{background:#eb840f;}
+
+/*layout*/
+.wrap{margin-top:48px;}
+.wrap_pb{margin-top:48px; padding-bottom:45px;}
+.p10{padding:10px;}
+.hm{text-align:center;}
+.break_all{word-break:break-all;}
+.fix_b{position:fixed; bottom:0; left:0;z-index:9999;}
+
+/*font bg color size*/
+h1{font:normal 1.286em/1.5 "";}/*18px*/
+h2{font:normal 1.143em/1.5 "";}/*16px*/
+h3{font:600 1em/1.5 "";}/*14px*/
+.price{margin-left:5px;}
+.price i{margin-left:2px; font-size:1.286em;}
+.greyfont{color:#686868;}
+.greyfont1{color:#909090;}
+.bggrey{height:100%; background:#f5f5f5;}
+
+/*header*/
+header{position:fixed; top:0; left:0; z-index:9999; width:100%; height:48px;background-color:#1491c5;}
+.returnico{position:absolute; left:0; top:0;  width:68px; height:48px; background-color:#15a4d5;}
+.returnico:before{left:25px;top:16px;width:12px;height:20px; background-position:0 0;}
+.icon_phone,.icon_home{width:42px;height:100%;top:0;position:relative;float:right;}
+.icon_phone:before{width:11px;height:20px;top:16px;right:12px;background-position:-115px -65px;}
+.icon_home:before{width:20px;height:19px;top:16px;right:10px;background-position:-83px -66px;}
+header i:active{opacity:0.7; filter:alpha(opacity=70);}
+header h1{position:absolute; width:100%;line-height:48px; text-align:center; letter-spacing:2px; color: #fff;}
+.header_r,.header_rs{position:absolute;z-index:9; top:0; right:0; line-height:48px; padding:0 15px; font-size:18px; background:#15a4d5; color:#fff;}
+.header_rs{padding:0 5px; font-size:12px; }
+
+/*background-position*/
+.select_n:before{width:20px;height:20px;background-position:-18px 0;}
+.select_n.current:before{background-position:-44px 0;}
+
+/*searchbox*/
+.search_wrap{overflow:hidden; padding:10px; background:#dfeaf1;}
+.search_box{position:relative; float:left; width:100%;}
+.search_input{width:100%; padding:0 10px 0 28px; line-height:30px; background-color:#fff; border-radius:4px; color:#ccc;}
+.fdj:before,.fdj:after,.search_box:before,.search_box:after{position:absolute; content:""; z-index:9;}
+.fdj:before,.search_box:before{left:5px; top:7px; width:12px; height:12px; border:1px solid #bcbcbc; border-radius:12px;}
+.fdj:after,.search_box:after{left:19px; top:17px; width:1px; height:8px; background:#bcbcbc;}
+.search_cancel{ display:none;float:left; width:20%; line-height:30px; text-align:center; font-size:16px;color:#1491c5; background:none; border:none;}
+.close_icon{display:none; position:absolute; z-index:10; top:8px; right:4px; width:16px; height:16px; border-radius:30px; background:#b1b1b1;}
+.close_icon:before,.close_icon:after{position:absolute; content:""; top:4px; left:7px; width:2px; height:8px; background:#fff; }
+.close_icon:before{-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);}
+.fdj:after,.search_box:after,.close_icon:after{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg);}
+.search_focus .search_box{width:80%;}
+.search_focus .close_icon, .search_focus .search_cancel{display:block;}
+.search_input:focus{color:#000;}
+
+/*tab*/
+.tab{ background-color:#f8f8f8; border-bottom:1px solid #dfdfdf;}
+.tab li{float:left; width:50%; height:39px; line-height:39px; text-align:center; border-right:1px solid #dfdfdf;}
+.tab li:last-child{border-right:none;}
+.tab li.tabcrt{ background-color:#dfdfdf;}
+
+.tab_b{ background-color:#f5f5f5; border-bottom:1px solid #c1c1c1;}
+.tab_b li{float:left; width:50%; height:39px; line-height:39px; text-align:center;}
+.tab_b li:last-child{border-right:none;}
+.tab_b li.tabcrt{color:#1491c5; border-bottom:4px solid #1491c5;}
+
+/*list*/
+.list_st_border{ background:#fff; border-bottom:none; border:1px solid #cfcfcf; }
+.list_st_border li{position:relative;padding:0 10px; line-height:42px; border-bottom:1px solid #cfcfcf;}
+.list_st_border li:last-child{border-bottom:none;}
+
+.list_sli{padding:10px; overflow:hidden; border-bottom:1px solid #cfcfcf; background:#fff;}
+.list_sli .list_sunit{float:left;}
+
+.citylist{color:#000;}
+.citylist dt,.citylist dd{padding-left:10px;border-bottom:1px solid #e2e2e2;}
+.citylist dt{line-height:25px; background-color:#eaeaea;}
+.citylist dd{position:relative; font-size:16px; line-height:43px; background-color:#fff;}
+.citylist .ok_crt{color:#1491c5;}
+.citylist .ok_crt:after{position:absolute;content:""; right:10px; top:50%; margin-top:-6px; width:12px; height:13px; background-position:-110px 0;}
+
+
+/*arr*/
+.li_arr_r{position:relative;}
+.arr_r{position:absolute;right:0px; top:50%; width:30px; height:30px; margin-top:-15px; }
+.arr_r:before,.arr_r:after,.li_arr_r:before,.li_arr_r:after{position: absolute; left:15px; content: "";width:2px; height:7px;  background-color:#909090;}
+.arr_r:before,.li_arr_r:before{top:10px;-webkit-transform:rotate(-45deg); -moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg);}
+.arr_r:after,.li_arr_r:after{top:15px;-webkit-transform:rotate(45deg); -moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);}
+.li_arr_r:before,.li_arr_r:after{left:auto; right:10px; top:50%; margin-top:-5px;}
+.li_arr_r:after{margin-top:0;}
+
+/*p*/
+.p_grey{margin:10px 5px; font-size:13px; color:#989898;}
+.p_grey_center{ text-align:center; margin:20px 5px; font-size:13px; color:#989898;}
+.p_hinttxt{padding:20px 10px; text-align:center; font-size:16px;  color:#1491c5;}
+
+
+/*btn*/
+.btn_yellow,.btn_del{width:100%; height:44px; line-height:42px; padding:0 10px;  color:#fff;}
+.btn_yellow{background:#ff9913;}
+.btn_del{background:#ca4345;text-align:center;font-size:1.2em;}
+
+.btn_pay{padding:0 20px;height:44px;float:right;background:#ff7d13;color:#fff;}
+.btn_pay:active{background:#ff7300;}
+.room_num {position:absolute; right:10px; width:100px; height:30px; line-height:30px;color:#000;background-color: #fff; text-align:center;border:#bfbfbf 1px solid;}
+.room_num i{position:absolute; width:30px; height:30px; text-align:center; font:normal 2em/28px "Arial";}
+.room_num i:first-child{left:0;background:#f4f4f4;color:#d9d9d9;font:normal 2.8em/25px "Arial";}
+.room_num i:last-child{right:0;background:#06a2d0;color:#fff;}
+
+
+    /*日历*/
+.cui_cldwrap{color:#000;}
+.cui_cldweek{height:25px; overflow:hidden;font:normal 12px/24px "verdana";border-bottom:1px solid #c8c8c8;}
+.cui_cldweek li{float:left; width:14%; text-align:center; }
+.cui_cldweek li:first-child,.cui_cldweek li:last-child{width:15%; color:#acacac;}
+.cui_cldmonth{height:35px;text-align:center;font:normal 16px/35px "verdana"; background:#fff;}
+.cui_cldunit{margin-bottom:20px;}
+.cui_cld_daybox{overflow:hidden; background:#fff;}
+.cui_cld_daybox li{float:left; width:14%; height:45px; padding:4px 0; font:normal 12px/45px "verdana"; overflow:hidden; text-align:center;}
+.cui_cld_daybox li:nth-child(7n),.cui_cld_daybox li:nth-child(7n+1){width:15%;}
+.cui_cld_daypass{ background:#f7f7f7;}
+.cui_cld_daycrt{background:#06a2d0; color:#fff;}
+.cui_cld_dayfuture{background:#fff;}
+.cui_cld_day_nocrtmonth{ visibility:hidden;}
+.cui_cld_day_havetxt em{display:block; line-height:25px;}
+.cui_cld_day_havetxt i{display:block;line-height:15px;}
+.cui_cld_day_hint{color:#06a2d0;}
+/*全局XXXX*/
+
+/*弹出蓝色框*/
+.cui-pop-box{background:#fff;}
+.cui-text-center{text-align:center;}
+.cui-pop-box .cui-hd{height:40px;line-height:40px;font-size:1.2em;color:#fff;background:#1491c5;padding:0 10px;position:relative;}
+.cui-pop-box .cui-hd .cui-close{position:absolute;top:10px; right:10px; width:18px; height:18px;line-height:18px;border-radius:50%; background:#fff;color:#1491c5;text-align:center;font-weight:bold;}
+.cui-error{width:150px;margin:auto;border-radius:5px;background:rgba(73,73,73,1);padding:10px;color:#fff;font-weight:700;text-align:center;word-break:break-all;}
+.cui-select-view li{border-bottom:#dfdfdf 1px solid;padding:.8em 2em .8em .8em;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;position:relative;}
+.cui-select-view li.current{color:#1084bc;}
+.cui-select-view li:active{background:rgba(0,0,0,.05);}
+.cui-select-view li.current:before,.cui-select-view li.current:after{position:absolute;content:"";background:#1084bc;height:3px;top:50%;border-radius:3px;}
+.cui-select-view li.current:before{width:18px;right:10px;margin-top:-2px;-webkit-transform:rotate(-50deg);-moz-transform:rotate(-50deg);-ms-transform:rotate(-50deg);transform:rotate(-50deg);}
+.cui-select-view li.current:after{width:9px;right:22px;margin-top:2px;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);}
+
+.cui-roller{width:100%;height:90px;overflow:hidden;position:relative;display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}
+.cui-roller .ul-list{text-align:center;font-size:1.1em;line-height:30px;-webkit-box-flex: 1;-moz-box-flex: 1;-webkit-flex: 1;-ms-flex: 1;flex: 1; position: absolute; left: 50%; margin-left: -23px; }
+.cui-mask{position:absolute;z-index:3;top: 0;left: 0;width: 100%;height: 100%;pointer-events: none;
+    background: linear-gradient(#fff 0,rgba(245,245,245,0) 52%,rgba(245,245,245,0) 48%,#fff 100%);
+    background: -webkit-gradient(linear,left bottom,left top,from(#fff),color-stop(0.52,rgba(245,245,245,0)),color-stop(0.48,rgba(245,245,245,0)),to(#fff));
+    background: -webkit-linear-gradient(#fff 0,rgba(245,245,245,0) 52%,rgba(245,245,245,0) 48%,#fff 100%);
+    background: -moz-linear-gradient(#fff 0,rgba(245,245,245,0) 52%,rgba(245,245,245,0) 48%,#fff 100%);
+}
+.cui-lines{width:100%;height:34px;position:absolute;top:50%;margin-top:-17px;border-top:#dfdfdf 1px solid;border-bottom:#dfdfdf 1px solid;}
+.cui-roller-tips{color:#8d8d8d;padding:5px;text-align:center;}
+.cui-roller-btns{background:#f6f5f5;padding:10px;text-align:center;}
+.cui-roller-btns span{width:45%;display:inline-block;padding:10px 0;color:#fff;}
+.cui-roller-btns span:active{opacity:.75;}
+.cui-roller-btns .cui-btns-cancel{background:#a9a9a9;margin-right:5%;}
+.cui-roller-btns .cui-btns-sure{background:#ff9913;}
+
+    </style>
+
+	<script id="others_zepto_10rc1" type="text/javascript" class="library" src="http://sandbox.runjs.cn/js/sandbox/other/zepto.min.js"></script>
+
+	<script type="text/javascript" src="http://sandbox.runjs.cn/uploads/rs/279/2h5lvbt5/fastclick.js"></script>
+</head>
+<body>
+  <div class="cui-pop-box">
+     <div class="cui-hd"><div class="cui-text-center">滚轮滚轮滚轮</div></div>
+     <div class="cui-bd">
+              <div class="cui-roller" id="wrapper">
+                  <ul class="ul-list" id="scroller">
+                      <li>选项1</li>
+                      <li>选项2</li>
+                      <li>选项3</li>
+                      <li>选项4</li>
+                      <li>选项5</li>
+                      <li>选项6</li>
+                      <li>选项7</li>
+                      <li>选项8</li>
+                      <li>选项9</li>
+                      <li>选项10</li>
+                      <li>选项11</li>
+                      <li>选项12</li>
+                      <li>选项13</li>
+                      <li>选项14</li>
+                      <li>选项15</li>
+                      <li>选项16</li>
+                      <li>选项17</li>
+                      <li>选项18</li>
+                      <li>选项19</li>
+                      <li>选项20</li> <li>选项1</li>
+                      <li>选项2</li>
+                      <li>选项3</li>
+                      <li>选项4</li>
+                      <li>选项5</li>
+                      <li>选项6</li>
+                      <li>选项7</li>
+                      <li>选项8</li>
+                      <li>选项9</li>
+                      <li>选项10</li>
+                      <li>选项11</li>
+                      <li>选项12</li>
+                      <li>选项13</li>
+                      <li>选项14</li>
+                      <li>选项15</li>
+                      <li>选项16</li>
+                      <li>选项17</li>
+                      <li>选项18</li>
+                      <li>选项19</li>
+                      <li>选项20</li>
+                  </ul>
+                  
+                  <div class="cui-mask" style=""></div>
+                  <div class="cui-lines">&nbsp;</div>
+              </div> 
+              <p class="cui-roller-tips">提示信息</p>
+              <div class="cui-roller-btns">
+                   <span class="cui-btns-cancel">取消</span><span class="cui-btns-sure">确定</span>
+              </div>
+     </div>
+</div>
+
+ <script type="text/javascript" >
+
+   var utils = (function () {
+     var me = {};
+     var _elementStyle = document.createElement('div').style;
+
+     //获得需要兼容CSS3前缀
+     var _vendor = (function () {
+       var vendors = ['t', 'webkitT', 'MozT', 'msT', 'OT'];
+       var transform;
+       var i = 0;
+       var l = vendors.length;
+
+       for (; i < l; i++) {
+         transform = vendors[i] + 'ransform';
+         if (transform in _elementStyle) return vendors[i].substr(0, vendors[i].length - 1);
+       }
+       return false;
+     })();
+
+     //获取样式（CSS3兼容）
+     function _prefixStyle(style) {
+       if (_vendor === false) return false;
+       if (_vendor === '') return style;
+       return _vendor + style.charAt(0).toUpperCase() + style.substr(1);
+     }
+
+     me.getTime = Date.now || function getTime() { return new Date().getTime(); };
+
+     me.addEvent = function (el, type, fn, capture) {
+       if (el[0]) el = el[0];
+       el.addEventListener(type, fn, !!capture);
+     };
+
+     me.removeEvent = function (el, type, fn, capture) {
+       if (el[0]) el = el[0];
+       el.removeEventListener(type, fn, !!capture);
+     };
+
+     /*
+     current：当前鼠标位置
+     start：touchStart时候记录的Y（可能是X）的开始位置，但是在touchmove时候可能被重写
+     time： touchstart到手指离开时候经历的时间，同样可能被touchmove重写
+     lowerMargin：y可移动的最大距离，这个一般为计算得出 this.wrapperHeight - this.scrollerHeight
+     wrapperSize：如果有边界距离的话就是可拖动，不然碰到0的时候便停止
+     */
+     me.momentum = function (current, start, time, lowerMargin, wrapperSize) {
+       var distance = current - start,
+		speed = Math.abs(distance) / time,
+		destination,
+		duration,
+		deceleration = 0.0006;
+
+       destination = current + (speed * speed) / (2 * deceleration) * (distance < 0 ? -1 : 1);
+       duration = speed / deceleration;
+
+       if (destination < lowerMargin) {
+         destination = wrapperSize ? lowerMargin - (wrapperSize / 2.5 * (speed / 8)) : lowerMargin;
+         distance = Math.abs(destination - current);
+         duration = distance / speed;
+       } else if (destination > 0) {
+         destination = wrapperSize ? wrapperSize / 2.5 * (speed / 8) : 0;
+         distance = Math.abs(current) + destination;
+         duration = distance / speed;
+       }
+
+       return {
+         destination: Math.round(destination),
+         duration: duration
+       };
+
+     };
+
+     $.extend(me, {
+       hasTouch: 'ontouchstart' in window
+     });
+
+
+     //我们暂时只判断touch 和 mouse即可
+     $.extend(me.style = {}, {
+       transform: _prefixStyle('transform'),
+       transitionTimingFunction: _prefixStyle('transitionTimingFunction'),
+       transitionDuration: _prefixStyle('transitionDuration'),
+       transitionDelay: _prefixStyle('transitionDelay'),
+       transformOrigin: _prefixStyle('transformOrigin')
+     });
+
+     $.extend(me.eventType = {}, {
+       touchstart: 1,
+       touchmove: 1,
+       touchend: 1,
+
+       mousedown: 2,
+       mousemove: 2,
+       mouseup: 2
+     });
+
+     $.extend(me.ease = {}, {
+       quadratic: {
+         style: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+         fn: function (k) {
+           return k * (2 - k);
+         }
+       },
+       circular: {
+         style: 'cubic-bezier(0.1, 0.57, 0.1, 1)', // Not properly "circular" but this looks better, it should be (0.075, 0.82, 0.165, 1)
+         fn: function (k) {
+           return Math.sqrt(1 - (--k * k));
+         }
+       },
+       back: {
+         style: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+         fn: function (k) {
+           var b = 4;
+           return (k = k - 1) * k * ((b + 1) * k + b) + 1;
+         }
+       },
+       bounce: {
+         style: '',
+         fn: function (k) {
+           if ((k /= 1) < (1 / 2.75)) {
+             return 7.5625 * k * k;
+           } else if (k < (2 / 2.75)) {
+             return 7.5625 * (k -= (1.5 / 2.75)) * k + 0.75;
+           } else if (k < (2.5 / 2.75)) {
+             return 7.5625 * (k -= (2.25 / 2.75)) * k + 0.9375;
+           } else {
+             return 7.5625 * (k -= (2.625 / 2.75)) * k + 0.984375;
+           }
+         }
+       },
+       elastic: {
+         style: '',
+         fn: function (k) {
+           var f = 0.22,
+		e = 0.4;
+
+           if (k === 0) { return 0; }
+           if (k == 1) { return 1; }
+
+           return (e * Math.pow(2, -10 * k) * Math.sin((k - f / 4) * (2 * Math.PI) / f) + 1);
+         }
+       }
+     });
+     return me;
+   })();
+
+   function IScroll(opts) {
+     this.wrapper = typeof opts.wrapper == 'string' ? $(opts.wrapper) : opts.wrapper;
+     this.scroller = typeof opts.scroller == 'string' ? $(opts.scroller) : opts.scroller;
+     if (!opts.wrapper[0] || !opts.scroller[0]) throw 'param error';
+
+     this.wrapper = this.wrapper[0];
+     this.scroller = this.scroller[0];
+
+     //这个属性会被动态改变的，如果这里
+     this.scrollerStyle = this.scroller.style;
+
+     this.options = {
+       //每次要求移动的步长
+        setp: false,
+       //是否具有滚动条
+       scrollbars: true,
+       // 其实时期Y的位置
+       startY: 0,
+       //超出边界还原时间点
+       bounceTime: 600,
+       //超出边界返回的动画
+       bounceEasing: utils.ease.circular,
+
+       //超出边界时候是否还能拖动
+       bounce: true,
+
+       bindToWrapper: true,
+
+       //当window触发resize事件60ms后还原
+       resizePolling: 60,
+       startX: 0,
+       startY: 0
+     };
+
+     for (var i in opts) {
+       this.options[i] = opts[i];
+     }
+
+     this.translateZ = ' translateZ(0)';
+
+     this.x = 0;
+     this.y = 0;
+     this._events = {};
+     this._init();
+
+     //更新滚动条位置
+     this.refresh();
+
+     //更新本身位置
+     this.scrollTo(this.options.startX, this.options.startY);
+
+     this.enable();
+
+   };
+
+   IScroll.prototype = {
+     _init: function () {
+       this._initEvents();
+
+       //初始化滚动条，滚动条此处需要做重要处理
+       if (this.options.scrollbars) {
+         this._initIndicator();
+       }
+     },
+     refresh: function () {
+       var rf = this.wrapper.offsetHeight; 	// Force reflow
+
+       this.wrapperHeight = this.wrapper.clientHeight;
+       this.scrollerHeight = this.scroller.offsetHeight;
+       this.maxScrollY = this.wrapperHeight - this.scrollerHeight;
+
+       this.endTime = 0;
+
+       this._execEvent('refresh');
+
+       this.resetPosition();
+
+     },
+     _initEvents: function (remove) {
+       var eventType = remove ? utils.removeEvent : utils.addEvent;
+       var target = this.options.bindToWrapper ? this.wrapper : window;
+
+       eventType(window, 'orientationchange', this);
+       eventType(window, 'resize', this);
+
+       if (utils.hasTouch) {
+         eventType(this.wrapper, 'touchstart', this);
+         eventType(target, 'touchmove', this);
+         eventType(target, 'touchcancel', this);
+         eventType(target, 'touchend', this);
+       } else {
+         eventType(this.wrapper, 'mousedown', this);
+         eventType(target, 'mousemove', this);
+         eventType(target, 'mousecancel', this);
+         eventType(target, 'mouseup', this);
+       }
+
+       eventType(this.scroller, 'transitionend', this);
+       eventType(this.scroller, 'webkitTransitionEnd', this);
+       eventType(this.scroller, 'oTransitionEnd', this);
+       eventType(this.scroller, 'MSTransitionEnd', this);
+     },
+     _start: function (e) {
+       if (!this.enabled || (this.initiated && utils.eventType[e.type] !== this.initiated)) {
+         return;
+       }
+
+       var point = e.touches ? e.touches[0] : e, pos;
+       this.initiated = utils.eventType[e.type];
+
+       this.moved = false;
+
+       this.distY = 0;
+
+       //开启动画时间，如果之前有动画的话，便要停止动画，这里因为没有传时间，所以动画便直接停止了
+       this._transitionTime();
+
+       this.startTime = utils.getTime();
+
+       //如果正在进行动画，需要停止，并且触发滑动结束事件
+       if (this.isInTransition) {
+         this.isInTransition = false;
+         pos = this.getComputedPosition();
+         var _x = Math.round(pos.x);
+         var _y = Math.round(pos.y);
+
+         if (_y < 0 && _y > this.maxScrollY && this.options.adjustXY) {
+           _y = this.options.adjustXY.call(this, _x, _y).y;
+         }
+
+         //移动过去
+         this._translate(_x, _y);
+         this._execEvent('scrollEnd');
+       }
+
+       this.startX = this.x;
+       this.startY = this.y;
+       this.absStartX = this.x;
+       this.absStartY = this.y;
+       this.pointX = point.pageX;
+       this.pointY = point.pageY;
+
+       this._execEvent('beforeScrollStart');
+
+       e.preventDefault();
+
+     },
+
+     _move: function (e) {
+       if (!this.enabled || utils.eventType[e.type] !== this.initiated) {
+         return;
+       }
+       e.preventDefault();
+
+       var point = e.touches ? e.touches[0] : e,
+      deltaX = point.pageX - this.pointX,
+      deltaY = point.pageY - this.pointY,
+      timestamp = utils.getTime(),
+      newX, newY,
+      absDistX, absDistY;
+
+       this.pointX = point.pageX;
+       this.pointY = point.pageY;
+
+       this.distX += deltaX;
+       this.distY += deltaY;
+       absDistX = Math.abs(this.distX);
+       absDistY = Math.abs(this.distY);
+
+       // 如果一直按着没反应的话这里就直接返回了
+       if (timestamp - this.endTime > 300 && (absDistX < 10 && absDistY < 10)) {
+         return;
+       }
+
+       newY = this.y + deltaY;
+
+       if (newY > 0 || newY < this.maxScrollY) {
+         newY = this.options.bounce ? this.y + deltaY / 3 : newY > 0 ? 0 : this.maxScrollY;
+       }
+
+       if (!this.moved) {
+         this._execEvent('scrollStart');
+       }
+
+       this.moved = true;
+
+       //暂时只考虑input问题，有效再扩展
+       var el = document.activeElement;
+       if (el.nodeName.toLowerCase() == 'input') {
+         el.blur();
+         this.disable();
+         setTimeout($.proxy(function () {
+           this.enable();
+         }, this), 250);
+         return;
+       }
+
+       this._translate(0, newY, true);
+
+       if (timestamp - this.startTime > 300) {
+         this.startTime = timestamp;
+         this.startX = this.x;
+         this.startY = this.y;
+       }
+
+
+     },
+     _end: function (e) {
+
+       if (!this.enabled || utils.eventType[e.type] !== this.initiated) {
+         return;
+       }
+
+       var point = e.changedTouches ? e.changedTouches[0] : e,
+      momentumY,
+      duration = utils.getTime() - this.startTime,
+      newX = Math.round(this.x),
+      newY = Math.round(this.y),
+      distanceX = Math.abs(newX - this.startX),
+      distanceY = Math.abs(newY - this.startY),
+      time = 0,
+      easing = '';
+
+       this.isInTransition = 0;
+       this.initiated = 0;
+       this.endTime = utils.getTime();
+
+       if (this.resetPosition(this.options.bounceTime)) {
+         return;
+       }
+
+       this.scrollTo(newX, newY);
+       if (!this.moved) {
+         //click 的情况
+
+         this._execEvent('scrollCancel');
+         return;
+       }
+
+       if (duration < 300) {
+
+         momentumY = utils.momentum(this.y, this.startY, duration, this.maxScrollY, this.options.bounce ? this.wrapperHeight : 0);
+         //      newX = momentumX.destination;
+         newY = momentumY.destination;
+         time = Math.max(momentumY.duration);
+         this.isInTransition = 1;
+       }
+
+       if (newY != this.y) {
+         if (newY > 0 || newY < this.maxScrollY) {
+           easing = utils.ease.quadratic;
+         }
+
+         this.scrollTo(newX, newY, time, easing);
+         return;
+       }
+
+       this._execEvent('scrollEnd');
+     },
+
+     _resize: function () {
+       var that = this;
+
+       clearTimeout(this.resizeTimeout);
+
+       this.resizeTimeout = setTimeout(function () {
+         that.refresh();
+       }, this.options.resizePolling);
+     },
+
+     _transitionTimingFunction: function (easing) {
+       this.scrollerStyle[utils.style.transitionTimingFunction] = easing;
+
+       this.indicator && this.indicator.transitionTimingFunction(easing);
+     },
+
+     //开始或者停止动画
+     _transitionTime: function (time) {
+       time = time || 0;
+       this.scrollerStyle[utils.style.transitionDuration] = time + 'ms';
+
+       //滚动条，我们这里只会出现一个滚动条就不搞那么复杂了
+       this.indicator && this.indicator.transitionTime(time);
+
+     },
+
+     getComputedPosition: function () {
+       var matrix = window.getComputedStyle(this.scroller, null), x, y;
+
+       matrix = matrix[utils.style.transform].split(')')[0].split(', ');
+       x = +(matrix[12] || matrix[4]);
+       y = +(matrix[13] || matrix[5]);
+
+       return { x: x, y: y };
+     },
+
+     _initIndicator: function () {
+       //滚动条
+       var el = createDefaultScrollbar();
+       this.wrapper.appendChild(el);
+       this.indicator = new Indicator(this, { el: el });
+
+       this.on('scrollEnd', function () {
+         this.indicator.fade();
+       });
+
+       var scope = this;
+       this.on('scrollCancel', function () {
+         scope.indicator.fade();
+       });
+
+       this.on('scrollStart', function () {
+         scope.indicator.fade(1);
+       });
+
+       this.on('beforeScrollStart', function () {
+         scope.indicator.fade(1, true);
+       });
+
+       this.on('refresh', function () {
+         scope.indicator.refresh();
+       });
+
+     },
+
+//移动x，y这里比较简单就不分离y了
+_translate: function (x, y, isStep) {
+
+  //处理步长
+  if (this.options.setp && !isStep) {
+    var flag2 = y > 0 ? 1 : -1; //这个会影响后面的计算结果
+    var top = Math.abs(y);
+    var mod = top % this.options.setp;
+    top = (parseInt(top / this.options.setp) * this.options.setp + (mod > (this.options.setp/2) ? this.options.setp : 0)) * flag2;
+    y = top;
+  }
+
+  this.scrollerStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px)' + this.translateZ;
+
+  this.x = x;
+  this.y = y;
+
+  if (this.options.scrollbars) {
+    this.indicator.updatePosition();
+  }
+
+},
+
+     resetPosition: function (time) {
+       var x = this.x,
+		y = this.y;
+
+       time = time || 0;
+
+       if (this.y > 0) {
+         y = 0;
+       } else if (this.y < this.maxScrollY) {
+         y = this.maxScrollY;
+       }
+
+       if (y == this.y) {
+         return false;
+       }
+
+       this.scrollTo(x, y, time, this.options.bounceEasing);
+
+       return true;
+     },
+
+     //移动
+     scrollTo: function (x, y, time, easing) {
+
+       //      //l_wang 必须项目高度的整数
+       //      if (y < 0 && y > this.maxScrollY && this.options.adjustXY) {
+       //        y = this.options.adjustXY.call(this, x, y).y;
+       //      }
+
+
+       if (this.options.adjustXY) {
+         y = this.options.adjustXY.call(this, x, y).y;
+       }
+
+       //l_wang 验证该项是否可选
+       if (this.options.checkSelected) {
+         y = this.options.checkSelected.call(this, x, y).y;
+       }
+
+       easing = easing || utils.ease.circular;
+
+       this.isInTransition = time > 0;
+
+       if (!time || easing.style) {
+         this._transitionTimingFunction(easing.style);
+         this._transitionTime(time);
+         this._translate(x, y);
+       }
+     },
+
+     //统一的关闭接口
+     disable: function () {
+       this.enabled = false;
+     },
+     //统一的open接口
+     enable: function () {
+       this.enabled = true;
+     },
+
+     on: function (type, fn) {
+       if (!this._events[type]) {
+         this._events[type] = [];
+       }
+
+       this._events[type].push(fn);
+     },
+
+     _execEvent: function (type) {
+       if (!this._events[type]) {
+         return;
+       }
+
+       var i = 0,
+			l = this._events[type].length;
+
+       if (!l) {
+         return;
+       }
+
+       for (; i < l; i++) {
+         this._events[type][i].call(this);
+       }
+     },
+     destroy: function () {
+       this._initEvents(true);
+       this._execEvent('destroy');
+       this.indicator && this.indicator.destroy();
+
+       console.log('destroy')
+
+     },
+
+     _transitionEnd: function (e) {
+       if (e.target != this.scroller || !this.isInTransition) {
+         return;
+       }
+
+       this._transitionTime();
+       if (!this.resetPosition(this.options.bounceTime)) {
+         this.isInTransition = false;
+         this._execEvent('scrollEnd');
+       }
+     },
+
+     //事件具体触发点
+     handleEvent: function (e) {
+       switch (e.type) {
+         case 'touchstart':
+         case 'mousedown':
+           this._start(e);
+           break;
+         case 'touchmove':
+         case 'mousemove':
+           this._move(e);
+           break;
+         case 'touchend':
+         case 'mouseup':
+         case 'touchcancel':
+         case 'mousecancel':
+           this._end(e);
+           break;
+         case 'orientationchange':
+         case 'resize':
+           this._resize();
+           break;
+         case 'transitionend':
+         case 'webkitTransitionEnd':
+         case 'oTransitionEnd':
+         case 'MSTransitionEnd':
+           this._transitionEnd(e);
+           break;
+       }
+     }
+
+   };
+
+   function createDefaultScrollbar() {
+     var scrollbar = document.createElement('div'),
+		indicator = document.createElement('div');
+
+     scrollbar.style.cssText = 'position:absolute;z-index:9999';
+     scrollbar.style.cssText += ';width:7px;bottom:2px;top:2px;right:1px';
+     scrollbar.style.cssText += ';overflow:hidden';
+
+     indicator.style.cssText = '-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.9);border-radius:3px';
+     indicator.style.width = '100%';
+
+     scrollbar.appendChild(indicator);
+
+     return scrollbar;
+   }
+
+   function Indicator(scroller, opts) {
+     this.wrapper = typeof opts.el == 'string' ? document.querySelector(opts.el) : opts.el;
+     this.indicator = this.wrapper.children[0];
+
+     this.wrapperStyle = this.wrapper.style;
+     this.indicatorStyle = this.indicator.style;
+     this.scroller = scroller;
+
+     this.sizeRatioY = 1;
+     this.maxPosY = 0;
+
+     this.wrapperStyle[utils.style.transform] = this.scroller.translateZ;
+     this.wrapperStyle[utils.style.transitionDuration] = '0ms';
+     //this.wrapperStyle.opacity = '0';
+   }
+
+   Indicator.prototype = {
+     transitionTime: function (time) {
+       time = time || 0;
+       this.indicatorStyle[utils.style.transitionDuration] = time + 'ms';
+     },
+     transitionTimingFunction: function (easing) {
+       this.indicatorStyle[utils.style.transitionTimingFunction] = easing;
+     },
+     refresh: function () {
+
+       this.transitionTime();
+
+       var r = this.wrapper.offsetHeight; // force refresh
+
+       this.wrapperHeight = this.wrapper.clientHeight;
+
+
+       this.indicatorHeight = Math.max(Math.round(this.wrapperHeight * this.wrapperHeight / (this.scroller.scrollerHeight || this.wrapperHeight || 1)), 8);
+       this.indicatorStyle.height = this.indicatorHeight + 'px';
+
+
+       this.maxPosY = this.wrapperHeight - this.indicatorHeight;
+       this.sizeRatioY = (this.scroller.maxScrollY && (this.maxPosY / this.scroller.maxScrollY));
+
+       this.updatePosition();
+     },
+     destroy: function () {
+       this.wrapper.remove();
+     },
+     updatePosition: function () {
+       var y = Math.round(this.sizeRatioY * this.scroller.y) || 0;
+       this.y = y;
+
+       //不需要兼容方式了
+       this.indicatorStyle[utils.style.transform] = 'translate(0px,' + y + 'px)' + this.scroller.translateZ;
+
+     },
+     fade: function (val, hold) {
+       if (hold && !this.visible) {
+         return;
+       }
+
+       clearTimeout(this.fadeTimeout);
+       this.fadeTimeout = null;
+
+       var time = val ? 250 : 500,
+			delay = val ? 0 : 300;
+
+       val = val ? '1' : '0';
+
+       this.wrapperStyle[utils.style.transitionDuration] = time + 'ms';
+
+       this.fadeTimeout = setTimeout($.proxy(function (val) {
+         this.wrapperStyle.opacity = val;
+         this.visible = +val;
+       }, this), delay);
+
+     }
+   };
+
+   IScroll.utils = utils;
+
+  </script>
+  <script type="text/javascript">
+
+var s = new IScroll({
+  wrapper: $('#wrapper'),
+  scroller: $('#scroller'),
+  scrollbars: false,
+  setp: 30
+});
+
+    new FastClick(document.body);
+
+  </script>
+</body>
+</html>
